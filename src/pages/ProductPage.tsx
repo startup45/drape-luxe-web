@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ShoppingCart, ChevronDown, ChevronUp, CheckCircle, Star } from "lucide-react";
 import Header from "@/components/Header";
