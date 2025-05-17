@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// DRAPE&LUXE custom colors
+				luxe: {
+					cream: '#F7F3EF',
+					beige: '#E8DFD8',
+					navy: '#2A3C55',
+					gold: '#D4B78F',
+					sage: '#C8D4B8',
+					charcoal: '#363636',
 				}
 			},
 			borderRadius: {
@@ -69,26 +79,44 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				"accordion-down": {
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+				"accordion-up": {
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				"towel-fall": {
+					"0%": { transform: "translateY(-100%) rotate(5deg)", opacity: "0" },
+					"70%": { transform: "translateY(10%) rotate(-2deg)", opacity: "1" },
+					"85%": { transform: "translateY(-5%) rotate(1deg)", opacity: "1" },
+					"100%": { transform: "translateY(0) rotate(0deg)", opacity: "1" }
+				},
+				"towel-unfold": {
+					"0%": { transform: "scaleY(0.1)", opacity: "0.5", transformOrigin: "top" },
+					"100%": { transform: "scaleY(1)", opacity: "1", transformOrigin: "top" }
+				},
+				"fade-in": {
+					"0%": { opacity: "0" },
+					"100%": { opacity: "1" }
+				},
+				"scale-in": {
+					"0%": { transform: "scale(0.95)", opacity: "0" },
+					"100%": { transform: "scale(1)", opacity: "1" }
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+				"towel-fall": "towel-fall 1s ease-out forwards",
+				"towel-unfold": "towel-unfold 0.5s ease-out forwards",
+				"fade-in": "fade-in 0.5s ease-out",
+				"scale-in": "scale-in 0.3s ease-out"
+			},
+			fontFamily: {
+				'playfair': ['"Playfair Display"', 'serif'],
+				'lato': ['Lato', 'sans-serif'],
 			}
 		}
 	},
