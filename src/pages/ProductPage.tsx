@@ -11,7 +11,7 @@ import { UnfoldingTowel } from "@/components/animation/UnfoldingTowel";
 import { useCart } from "@/context/CartContext";
 import { toast } from "sonner";
 
-// Sample product data - would normally come from an API
+// Sample product data with updated images - would normally come from an API
 const products = [
   {
     id: "1",
@@ -27,7 +27,7 @@ const products = [
     ],
     price: 3500,
     images: [
-      "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww",
+      "https://images.pexels.com/photos/12932367/pexels-photo-12932367.jpeg",
       "https://images.unsplash.com/photo-1600369671236-e74531c602de?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1620983941458-0a9009544aae?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhdGglMjB0b3dlbHxlbnwwfHwwfHx8MA%3D%3D",
@@ -47,7 +47,7 @@ const products = [
     ],
     price: 1750,
     images: [
-      "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGFuZCUyMHRvd2VsfGVufDB8fDB8fHww",
+      "https://images.pexels.com/photos/2672634/pexels-photo-2672634.jpeg",
       "https://images.unsplash.com/photo-1583771376798-4a695725d446?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGFuZCUyMHRvd2VsfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1641202758995-e2bf61fa4355?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhbmQlMjB0b3dlbHxlbnwwfHwwfHx8MA%3D%3D",
     ]
@@ -66,6 +66,8 @@ const products = [
     ],
     price: 4800,
     images: [
+      "https://images.pexels.com/photos/18190570/pexels-photo-18190570.jpeg",
+      "https://images.pexels.com/photos/6188050/pexels-photo-6188050.jpeg",
       "https://images.unsplash.com/photo-1607006483137-a7f625e72125?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG93ZWxzfGVufDB8fDB8fHww",
       "https://images.unsplash.com/photo-1648570000562-4cf58ec534f9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRvd2VscyUyMHNldHxlbnwwfHwwfHx8MA%3D%3D",
     ]

@@ -218,7 +218,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
             <div className="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8">
               <UnfoldingTowel 
-                image="https://images.unsplash.com/photo-1600369671236-e74531c602de?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww" 
+                image="https://images.pexels.com/photos/12932367/pexels-photo-12932367.jpeg" 
                 alt="DRAPE&LUXE towel in spa setting"
               />
             </div>
