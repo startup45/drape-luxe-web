@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ShoppingBag, Droplet, Wind } from "lucide-react";
@@ -11,13 +10,14 @@ import FeatureCard from "@/components/FeatureCard";
 import ReviewCard from "@/components/ReviewCard";
 import Newsletter from "@/components/Newsletter";
 import { UnfoldingTowel } from "@/components/animation/UnfoldingTowel";
+import BackgroundVideo from "@/components/BackgroundVideo";
 
 // Sample product data
 const featuredProducts = [
   {
     id: "1",
     name: "Honeycomb Waffle Bath Towel",
-    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww",
+    image: "https://images.pexels.com/photos/12932367/pexels-photo-12932367.jpeg",
     price: 3500,
     size: "Bath (30\" x 56\")",
     color: "Beige"
@@ -25,7 +25,7 @@ const featuredProducts = [
   {
     id: "2",
     name: "Waffle Hand Towel Set",
-    image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGFuZCUyMHRvd2VsfGVufDB8fDB8fHww",
+    image: "https://images.pexels.com/photos/2672634/pexels-photo-2672634.jpeg",
     price: 1750,
     size: "Hand (16\" x 28\")",
     color: "Grey"
@@ -33,7 +33,7 @@ const featuredProducts = [
   {
     id: "3",
     name: "Premium Bath & Hand Towel Bundle",
-    image: "https://images.unsplash.com/photo-1607006483137-a7f625e72125?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG93ZWxzfGVufDB8fDB8fHww",
+    image: "https://images.pexels.com/photos/18190570/pexels-photo-18190570.jpeg",
     price: 4800,
     color: "White"
   }
@@ -63,10 +63,10 @@ const reviews = [
 
 // Towel images for animations
 const towelImages = [
-  "https://images.unsplash.com/photo-1600369671236-e74531c602de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww",
-  "https://images.unsplash.com/photo-1607006483137-a7f625e72125?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG93ZWxzfGVufDB8fDB8fHww",
-  "https://images.unsplash.com/photo-1652464179901-35d6fb00bc97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRvd2Vsc3xlbnwwfHwwfHx8MA%3D%3D",
-  "https://images.unsplash.com/photo-1601741977563-7dd7c5db31d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHRvd2Vsc3xlbnwwfHwwfHx8MA%3D%3D",
+  "https://images.pexels.com/photos/12932367/pexels-photo-12932367.jpeg",
+  "https://images.pexels.com/photos/2672634/pexels-photo-2672634.jpeg",
+  "https://images.pexels.com/photos/18190570/pexels-photo-18190570.jpeg",
+  "https://images.pexels.com/photos/6188050/pexels-photo-6188050.jpeg",
   "https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRvd2Vsc3xlbnwwfHwwfHx8MA%3D%3D",
 ];
 
@@ -75,41 +75,38 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-luxe-cream">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                <GroupFallingTowels images={towelImages.slice(0, 5)} />
-              </div>
-              <div className="w-full md:w-1/2 text-center md:text-left">
-                <FadeInOnScroll delay={1}>
-                  <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-luxe-navy mb-6">
-                    Wrap Yourself in Luxury
-                  </h1>
-                </FadeInOnScroll>
-                
-                <FadeInOnScroll delay={1.2}>
-                  <p className="font-lato text-xl md:text-2xl text-luxe-navy/80 mb-8">
-                    Ultra-soft, quick-drying honeycomb towels for your everyday spa experience.
-                  </p>
-                </FadeInOnScroll>
-                
-                <FadeInOnScroll delay={1.4}>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+      {/* Hero Section with Background Video */}
+      <section className="h-screen relative overflow-hidden">
+        <BackgroundVideo videoUrl="https://player.vimeo.com/progressive_redirect/playback/525579046/rendition/1080p/file.mp4?loc=external&signature=19815eb82b2a792d31633978a07ce63cdfad5b128c0c64fae31865a6518bc053" />
+        
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto text-center">
+              <FadeInOnScroll delay={0.5}>
+                <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+                  Wrap Yourself in Luxury
+                </h1>
+              </FadeInOnScroll>
+              
+              <FadeInOnScroll delay={0.7}>
+                <p className="font-lato text-xl md:text-2xl text-white/90 mb-8">
+                  Ultra-soft, quick-drying honeycomb towels for your everyday spa experience.
+                </p>
+              </FadeInOnScroll>
+              
+              <FadeInOnScroll delay={0.9}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link 
+                    to="/products" 
+                    className="inline-block bg-luxe-gold text-white font-lato font-medium px-8 py-4 rounded-md text-lg transition-colors hover:bg-luxe-gold/90"
                   >
-                    <Link 
-                      to="/products" 
-                      className="inline-block bg-luxe-navy text-white font-lato font-medium px-8 py-4 rounded-md text-lg transition-colors hover:bg-luxe-gold"
-                    >
-                      Shop Now
-                    </Link>
-                  </motion.div>
-                </FadeInOnScroll>
-              </div>
+                    Shop Now
+                  </Link>
+                </motion.div>
+              </FadeInOnScroll>
             </div>
           </div>
         </div>
