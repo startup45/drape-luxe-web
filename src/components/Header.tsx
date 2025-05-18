@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, User, Search, Menu, X } from "lucide-react";
@@ -17,7 +16,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full bg-luxe-navy/30 backdrop-blur-md z-50 py-4 px-6 shadow-sm">
+    <header className="fixed w-full bg-luxe-navy z-50 py-4 px-6 shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <h1 className="font-playfair font-bold text-2xl md:text-3xl text-white">
@@ -83,7 +82,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden bg-luxe-navy/90 backdrop-blur-md absolute left-0 w-full py-4 px-6 shadow-md animate-fade-in">
+        <nav className="md:hidden bg-luxe-navy absolute left-0 w-full py-4 px-6 shadow-md animate-fade-in">
           <ul className="flex flex-col space-y-4">
             <li>
               <Link to="/" className="font-lato font-medium text-white hover:text-luxe-gold transition-colors block" onClick={() => setIsMenuOpen(false)}>
