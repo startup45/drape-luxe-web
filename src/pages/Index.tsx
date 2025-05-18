@@ -12,7 +12,6 @@ import Newsletter from "@/components/Newsletter";
 import { UnfoldingTowel } from "@/components/animation/UnfoldingTowel";
 import BackgroundVideo from "@/components/BackgroundVideo";
 
-// Sample product data
 const featuredProducts = [
   {
     id: "1",
@@ -39,7 +38,6 @@ const featuredProducts = [
   }
 ];
 
-// Sample reviews
 const reviews = [
   {
     name: "Priya M.",
@@ -61,24 +59,13 @@ const reviews = [
   }
 ];
 
-// Towel images for animations
-const towelImages = [
-  "https://images.pexels.com/photos/12932367/pexels-photo-12932367.jpeg",
-  "https://images.pexels.com/photos/2672634/pexels-photo-2672634.jpeg",
-  "https://images.pexels.com/photos/18190570/pexels-photo-18190570.jpeg",
-  "https://images.pexels.com/photos/6188050/pexels-photo-6188050.jpeg",
-  "https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHRvd2Vsc3xlbnwwfHwwfHx8MA%3D%3D",
-];
-
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
-      {/* Hero Section with Background Video */}
+{/* 
       <section className="h-screen relative overflow-hidden">
-        <BackgroundVideo videoUrl="https://player.vimeo.com/progressive_redirect/playback/525579046/rendition/1080p/file.mp4?loc=external&signature=19815eb82b2a792d31633978a07ce63cdfad5b128c0c64fae31865a6518bc053" />
-        
+        <BackgroundVideo videoUrl="" />
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
@@ -87,22 +74,14 @@ const Index = () => {
                   Wrap Yourself in Luxury
                 </h1>
               </FadeInOnScroll>
-              
               <FadeInOnScroll delay={0.7}>
                 <p className="font-lato text-xl md:text-2xl text-white/90 mb-8">
                   Ultra-soft, quick-drying honeycomb towels for your everyday spa experience.
                 </p>
               </FadeInOnScroll>
-              
               <FadeInOnScroll delay={0.9}>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link 
-                    to="/products" 
-                    className="inline-block bg-luxe-gold text-white font-lato font-medium px-8 py-4 rounded-md text-lg transition-colors hover:bg-luxe-gold/90"
-                  >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link to="/products" className="inline-block bg-luxe-gold text-white font-lato font-medium px-8 py-4 rounded-md text-lg transition-colors hover:bg-luxe-gold/90">
                     Shop Now
                   </Link>
                 </motion.div>
@@ -110,9 +89,35 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section> */}
+      <section className="h-screen relative overflow-hidden">
+        <BackgroundVideo videoUrl="/5116401-hd_1920_1080_25fps (1).mp4" />
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="container mx-auto px-4 text-center max-w-2xl">
+            <FadeInOnScroll delay={0.5}>
+              <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+                Wrap Yourself in Luxury
+              </h1>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={0.7}>
+              <p className="font-lato text-xl md:text-2xl text-white/90 mb-8">
+                Ultra-soft, quick-drying honeycomb towels for your everyday spa experience.
+              </p>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={0.9}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  to="/products"
+                  className="inline-block bg-luxe-gold text-white font-lato font-medium px-8 py-4 rounded-md text-lg transition-colors hover:bg-luxe-gold/90"
+                >
+                  Shop Now
+                </Link>
+              </motion.div>
+            </FadeInOnScroll>
+          </div>
+        </div>
       </section>
-      
-      {/* Features Section */}
+
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <FadeInOnScroll>
@@ -120,31 +125,14 @@ const Index = () => {
               Elevate Your Everyday
             </h2>
           </FadeInOnScroll>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <FeatureCard 
-              title="100% Premium Cotton" 
-              description="Crafted from the finest cotton for exceptional softness and durability."
-              icon={<ShoppingBag size={32} />}
-              delay={0.2}
-            />
-            <FeatureCard 
-              title="Lightweight Waffle Weave" 
-              description="Unique honeycomb texture enhances absorption while staying lightweight."
-              icon={<Droplet size={32} />}
-              delay={0.4}
-            />
-            <FeatureCard 
-              title="Quick-Drying Comfort" 
-              description="Engineered to dry faster than traditional terry towels."
-              icon={<Wind size={32} />}
-              delay={0.6}
-            />
+            <FeatureCard title="100% Premium Cotton" description="Crafted from the finest cotton for exceptional softness and durability." icon={<ShoppingBag size={32} />} delay={0.2} />
+            <FeatureCard title="Lightweight Waffle Weave" description="Unique honeycomb texture enhances absorption while staying lightweight." icon={<Droplet size={32} />} delay={0.4} />
+            <FeatureCard title="Quick-Drying Comfort" description="Engineered to dry faster than traditional terry towels." icon={<Wind size={32} />} delay={0.6} />
           </div>
         </div>
       </section>
-      
-      {/* Shop Section */}
+
       <section className="py-20 bg-luxe-beige/30">
         <div className="container mx-auto px-4">
           <FadeInOnScroll>
@@ -152,7 +140,6 @@ const Index = () => {
               Featured Collection
             </h2>
           </FadeInOnScroll>
-          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {featuredProducts.map((product, index) => (
               <FadeInOnScroll key={product.id} delay={index * 0.2}>
@@ -160,17 +147,10 @@ const Index = () => {
               </FadeInOnScroll>
             ))}
           </div>
-          
           <FadeInOnScroll delay={0.6}>
             <div className="text-center mt-12">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link 
-                  to="/products" 
-                  className="inline-block bg-luxe-navy text-white font-lato font-medium px-8 py-3 rounded-md text-lg transition-colors hover:bg-luxe-gold"
-                >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link to="/products" className="inline-block bg-luxe-navy text-white font-lato font-medium px-8 py-3 rounded-md text-lg transition-colors hover:bg-luxe-gold">
                   View All Products
                 </Link>
               </motion.div>
@@ -178,8 +158,7 @@ const Index = () => {
           </FadeInOnScroll>
         </div>
       </section>
-      
-      {/* Reviews Section */}
+
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <FadeInOnScroll>
@@ -187,7 +166,6 @@ const Index = () => {
               What Our Customers Say
             </h2>
           </FadeInOnScroll>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {reviews.map((review, index) => (
               <FadeInOnScroll key={index} delay={index * 0.2}>
@@ -195,13 +173,9 @@ const Index = () => {
               </FadeInOnScroll>
             ))}
           </div>
-          
           <FadeInOnScroll delay={0.6}>
             <div className="text-center mt-12">
-              <Link 
-                to="/reviews" 
-                className="inline-block font-lato font-medium text-luxe-navy border-b-2 border-luxe-gold pb-1 transition-colors hover:text-luxe-gold"
-              >
+              <Link to="/reviews" className="inline-block font-lato font-medium text-luxe-navy border-b-2 border-luxe-gold pb-1 transition-colors hover:text-luxe-gold">
                 Read More Reviews
               </Link>
             </div>
@@ -209,17 +183,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Image Feature */}
       <section className="py-20 bg-luxe-cream/50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
             <div className="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8">
-              <UnfoldingTowel 
-                image="https://images.pexels.com/photos/12932367/pexels-photo-12932367.jpeg" 
-                alt="DRAPE&LUXE towel in spa setting"
-              />
+              <UnfoldingTowel image="https://images.pexels.com/photos/12932367/pexels-photo-12932367.jpeg" alt="DRAPE&LUXE towel in spa setting" />
             </div>
-            
             <div className="w-full md:w-1/2">
               <FadeInOnScroll>
                 <h2 className="font-playfair font-semibold text-3xl md:text-4xl text-luxe-navy mb-6">
@@ -230,50 +199,28 @@ const Index = () => {
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start">
-                    <div className="bg-luxe-gold/20 rounded-full p-1 mr-3 mt-1">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="#2A3C55" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <span>Ultra-soft and absorbent waffle weave</span>
+                    <div className="bg-luxe-gold text-white rounded-full p-2 mr-4">✓</div>
+                    <span>100% premium cotton</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-luxe-gold/20 rounded-full p-1 mr-3 mt-1">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="#2A3C55" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <span>Quick-drying and lightweight for everyday use</span>
+                    <div className="bg-luxe-gold text-white rounded-full p-2 mr-4">✓</div>
+                    <span>Quick-drying waffle weave</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="bg-luxe-gold/20 rounded-full p-1 mr-3 mt-1">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 6L9 17L4 12" stroke="#2A3C55" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                    <span>Perfect for bath, gym, or travel</span>
+                    <div className="bg-luxe-gold text-white rounded-full p-2 mr-4">✓</div>
+                    <span>Minimalist & modern design</span>
                   </li>
                 </ul>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link 
-                    to="/about" 
-                    className="inline-block bg-luxe-navy text-white font-lato font-medium px-8 py-3 rounded-md transition-colors hover:bg-luxe-gold"
-                  >
-                    Our Story
-                  </Link>
-                </motion.div>
+                <Link to="/about" className="inline-block bg-luxe-navy text-white font-lato font-medium px-6 py-3 rounded-md text-lg transition-colors hover:bg-luxe-gold">
+                  Learn More
+                </Link>
               </FadeInOnScroll>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* Newsletter Section */}
+
       <Newsletter />
-      
       <Footer />
     </div>
   );

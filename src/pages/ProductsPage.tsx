@@ -31,7 +31,7 @@ const allProducts = [
   {
     id: "3",
     name: "Premium Bath & Hand Towel Bundle",
-    image: "https://images.unsplash.com/photo-1607006483137-a7f625e72125?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG93ZWxzfGVufDB8fDB8fHww",
+    image: "https://i.pinimg.com/736x/94/1d/c5/941dc5a4df360bd5f347b01e5ea617c1.jpg",
     price: 4800,
     color: "White",
     category: "bundle"
@@ -39,7 +39,7 @@ const allProducts = [
   {
     id: "4",
     name: "Honeycomb Bath Towel - White",
-    image: "https://images.unsplash.com/photo-1600369671236-e74531c602de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww",
+    image: "https://i.pinimg.com/736x/94/1d/c5/941dc5a4df360bd5f347b01e5ea617c1.jpg",
     price: 3500,
     color: "White",
     category: "bath"
@@ -47,7 +47,7 @@ const allProducts = [
   {
     id: "5",
     name: "Honeycomb Bath Towel - Navy",
-    image: "https://images.unsplash.com/photo-1652464179901-35d6fb00bc97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRvd2Vsc3xlbnwwfHwwfHx8MA%3D%3D",
+    image: "https://i.pinimg.com/736x/94/1d/c5/941dc5a4df360bd5f347b01e5ea617c1.jpg",
     price: 3500,
     color: "Navy",
     category: "bath"
@@ -55,7 +55,7 @@ const allProducts = [
   {
     id: "6",
     name: "Waffle Hand Towel Set - Beige",
-    image: "https://images.unsplash.com/photo-1583771376798-4a695725d446?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGFuZCUyMHRvd2VsfGVufDB8fDB8fHww",
+    image: "https://i.pinimg.com/736x/94/1d/c5/941dc5a4df360bd5f347b01e5ea617c1.jpg",
     price: 1750,
     color: "Beige",
     category: "hand"
@@ -63,7 +63,7 @@ const allProducts = [
   {
     id: "7",
     name: "Family Bundle Pack",
-    image: "https://images.unsplash.com/photo-1648570000562-4cf58ec534f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRvd2VscyUyMHNldHxlbnwwfHwwfHx8MA%3D%3D",
+    image: "https://i.pinimg.com/736x/94/1d/c5/941dc5a4df360bd5f347b01e5ea617c1.jpg",
     price: 7999,
     description: "4 Bath Towels + 4 Hand Towels",
     category: "bundle"
@@ -89,13 +89,13 @@ const ProductsPage = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow pt-32 pb-20">
+      <main className="flex-grow  pb-20">
         {/* Hero Banner */}
         <div className="relative h-[300px] md:h-[400px] overflow-hidden mb-12">
           <div className="absolute inset-0 bg-luxe-navy/30 z-10"></div>
           <div className="absolute inset-0">
             <img 
-              src="https://images.unsplash.com/photo-1600369671236-e74531c602de?w=1000&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmF0aCUyMHRvd2VsfGVufDB8fDB8fHww" 
+              src="https://images.unsplash.com/photo-1639298109207-5a9ccc254481?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               alt="DRAPE&LUXE towel collection"
               className="w-full h-full object-cover"
             />
@@ -183,7 +183,7 @@ const ProductsPage = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
               <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                <UnfoldingTowel image="https://images.unsplash.com/photo-1607006483137-a7f625e72125?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG93ZWxzfGVufDB8fDB8fHww" />
+                <UnfoldingTowel image="https://i.pinimg.com/736x/94/1d/c5/941dc5a4df360bd5f347b01e5ea617c1.jpg" />
               </div>
               
               <div className="w-full md:w-1/2">

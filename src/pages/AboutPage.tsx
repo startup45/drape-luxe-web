@@ -10,13 +10,13 @@ const AboutPage = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-grow pt-32 pb-20">
+      <main className="flex-grow pb-20">
         {/* Hero Section */}
         <section className="relative h-[400px] md:h-[500px] overflow-hidden mb-20">
           <div className="absolute inset-0 bg-luxe-navy/40 z-10"></div>
           <div className="absolute inset-0">
             <img 
-              src="https://images.unsplash.com/photo-1584092780833-5dbc48510126?w=1000&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNwYSUyMGJhdGhyb29tfGVufDB8fDB8fHww"
+              src="https://i.pinimg.com/736x/2a/7a/69/2a7a69f0c7a40c1a88530ea1ffeb9477.jpg"
               alt="Spa bathroom with DRAPE&LUXE towels"
               className="w-full h-full object-cover"
             />

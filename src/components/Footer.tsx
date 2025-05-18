@@ -102,7 +102,7 @@ const Footer = () => {
 
         <div className="border-t border-luxe-navy/30 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-luxe-beige">
-            <p>© {new Date().getFullYear()} DRAPE&LUXE. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} DRAPE&LUXE. All rights reserved.| Developed by <a href="https://develupers.in"><b>Develupers</b></a></p>
             <div className="flex mt-4 md:mt-0 space-x-6">
               <Link to="/privacy-policy" className="hover:text-luxe-gold transition-colors">
                 Privacy Policy
